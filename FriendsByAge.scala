@@ -15,7 +15,7 @@ object FriendsByAge{
 
     Logger.getLogger("org").setLevel(Level.ERROR)
 
-    val sc = new SparkContext("local[*]", "HelloWorld")
+    val sc = new SparkContext("local[*]", "FriendsByAge")
 
     val data = sc.textFile("data/fakefriends-noheader.csv")
     val rdd = data.map(parseLine)
