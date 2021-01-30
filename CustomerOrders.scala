@@ -19,5 +19,6 @@ object CustomerOrders {
     val reducedAmounts = tuples.reduceByKey(_+_)
 
     reducedAmounts.collect().sorted.foreach(println)
+    sc.stop()
   }
 }

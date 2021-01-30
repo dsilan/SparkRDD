@@ -24,6 +24,8 @@ object WordCount {
       val count= results._1
 
       println(s"$word:$count")
+
+      sc.stop()
     }
   }
 }
